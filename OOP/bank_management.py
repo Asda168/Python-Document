@@ -1,12 +1,10 @@
 """
-Bank Management System - Python OOP
-Features: Create Account, Login, Deposit, Withdraw, Transfer
+    Bank Management System - Python OOP
+    Features: Create Account, Login, Deposit, Withdraw, Transfer
 """
-
 import uuid
 import hashlib
 from datetime import datetime
-
 
 class Transaction:
     def __init__(self, transaction_type, amount, balance_after, description=""):
@@ -23,7 +21,6 @@ class Transaction:
                 f"Balance: ${self.balance_after:>10.2f}  "
                 f"{self.description}")
 
-
 class Account:
     def __init__(self, owner_name, password, initial_deposit=0.0):
         self.account_number = self._generate_account_number()
@@ -38,7 +35,7 @@ class Account:
             self.transactions.append(txn)
 
     def _generate_account_number(self):
-        return "ACC-" + str(uuid.uuid4())[:8].upper()
+        return "ASDA -" + str(uuid.uuid4())[:8].upper()
 
     def _hash_password(self, password):
         return hashlib.sha256(password.encode()).hexdigest()
