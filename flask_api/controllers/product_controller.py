@@ -1,7 +1,7 @@
 from flask import Blueprint
 
-product_bp = Blueprint('product', __name__, url_prefix='/admin')
+product_bp = Blueprint('product', __name__, url_prefix='/admin/product')
 
-@product_bp.route('/product')
+@product_bp.route('/')
 def product():
     return 'product'
