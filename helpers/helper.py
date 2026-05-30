@@ -1,5 +1,3 @@
-# format_helpers.py
-
 def format_number(number, decimals=2, thousands_sep=',', decimal_sep='.', prefix='', suffix=''):
     formatted = f"{number:,.{decimals}f}"
     if thousands_sep != ',' or decimal_sep != '.':
